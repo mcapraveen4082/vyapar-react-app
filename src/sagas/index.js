@@ -5,8 +5,8 @@ import {helloSaga} from './hellosaga';
 
 
 export default function* rootSaga() {
-    yield [
+    yield all([
         fork(helloSaga),
         // barSagas
-    ]
+    ])
 }

@@ -22,6 +22,9 @@ class Homepage extends Component {
                     <p>
                         {this.props.message}
                     </p>
+                    <p>
+                        {this.props.message1}
+                    </p>
                 </header>
             </div>
         );
@@ -30,7 +33,10 @@ class Homepage extends Component {
 
 const mapStateToProps = (state) => {
     console.log('state',state);
-    return { message: state.getHelloMsg.message };
+    return {
+        message: state.getHelloMsg.message,
+        message1: state.get_hello_call.message1,
+    };
 }
 
 
