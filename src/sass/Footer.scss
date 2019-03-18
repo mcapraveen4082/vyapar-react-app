@@ -1,0 +1,71 @@
+.footer-main-wrapper{
+  width: 100%;
+  padding: 50px 0;
+  position: relative;
+  background-color: #bdf1f1;
+  // background-image: url(https://d2407na1z3fc0t.cloudfront.net/Banner/Deep-Sea-Fish-Sourcing-Licious-Web.jpg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  .footer{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    ul{
+      padding: 0;
+      flex: 1;
+      li{
+        list-style-type: none;
+        padding: 5px 0;
+        a{
+          color: #777777;
+          text-decoration: none;
+        }
+      }
+      .footer-header{
+        font-size: 20px;
+        font-weight: 700;
+        padding: 10px 0;
+        color: #000000;
+      }
+    }
+    .blogs-list{
+      li:nth-child(n+2){
+        list-style-type: disc;
+      }
+    }
+    .copyright{
+      width: 100%;
+      padding: 20px 10%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-align: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row;
+      border-top: 1px solid #ffffff;
+      span{
+        color: #777777;
+        a{
+          color: #777777;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media all and (min-width: 300px) and (max-width: 799px){
+  .footer{
+    flex-direction: column !important;
+  }
+  .copyright{
+    flex-direction: column !important;
+  }
+}
