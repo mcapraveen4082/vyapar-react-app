@@ -6,7 +6,7 @@ import {helloSaga} from './hellosaga';
 
 export default function* rootSaga() {
     yield all([
-        fork(helloSaga),
+        helloSaga(),
         // barSagas
     ])
 }

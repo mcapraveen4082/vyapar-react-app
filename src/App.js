@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
 
 import Header from "./snippets/Header/Header";
 import Footer from "./snippets/Footer/Footer";
 import Homepage from "./components/Index/Homepage";
+import NotFound from "./components/NotFound/NotFound";
 
 
 
@@ -13,11 +14,14 @@ class App extends Component {
     render() {
     return (
         <Router>
-            <div>
-              <Header />
-              <Route path="/" component={Homepage} />
-              <Footer/>
-            </div>
+            <Switch>
+                <div>
+                  <Header />
+                  <Route exact path="/" component={Homepage} />
+                  {/*<Route component={NotFound} />*/}
+                  <Footer/>
+                </div>
+            </Switch>
         </Router>
 
     );
